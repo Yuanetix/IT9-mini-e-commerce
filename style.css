@@ -1,0 +1,73 @@
+:root {
+  --accent-color: #f63f2d;
+  --accent-hover: #d32f1f;
+  --accent-active: #b92a1b;
+  --text-on-accent: #fff;
+  --text-accent: #f63f2d;
+  --card-img-bg: #f8f9fa;
+  --body-font: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: contain;
+  padding: 15px;
+  background: var(--card-img-bg);
+}
+
+.cart-table th,
+.cart-table td {
+  vertical-align: middle;
+}
+
+.quantity-input {
+  width: 70px;
+  display: inline-block;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #receiptModal,
+  #receiptModal * {
+    visibility: visible;
+  }
+  #receiptModal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.text-accent {
+  color: var(--text-accent) !important;
+}
+
+/* Navbar */
+.navbar.bg-accent .navbar-brand {
+  color: var(--text-on-accent) !important;
+}
+
+/* Add to Cart Buttons */
+.btn-dark,
+.btn-add-to-cart {
+  --bs-btn-bg: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-bg: var(--accent-hover);
+  --bs-btn-hover-border-color: var(--accent-hover);
+  --bs-btn-active-bg: var(--accent-active);
+  --bs-btn-active-border-color: var(--accent-active);
+  --bs-btn-color: var(--text-on-accent);
+  --bs-btn-hover-color: var(--text-on-accent);
+  --bs-btn-active-color: var(--text-on-accent);
+}
